@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="#f6f6f6"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/projectlogo"
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/projectlogo"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/projectlogo"
+
+            android:drawableLeft="@mipmap/search_img"
+            android:drawablePadding="15dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="请输入搜索内容"
+            android:paddingLeft="15dp"
+            android:textColor="#e1e1e1"
+            android:textSize="14sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.zhangyu.eventbusdemo.MyScrollview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/bannerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="12345455"
+
+                    android:background="@drawable/hometextview"
+                    android:textColor="#ffffff"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|right"
+                    android:text="12345455"
+                    android:background="@drawable/hometextview"
+                    android:textColor="#ffffff"
+
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/jump_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bannerLayout"
+                android:background="@color/homepageredcolor"
+
+                android:orientation="horizontal"
+                android:tag="(0,248)">
+
+                <TextView
+                    android:id="@+id/jumpto_puraseFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/jumptopurse"
+                    android:gravity="center"
+                    android:text="我要买车"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/jumpto_sellFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/jumptosale"
+                    android:gravity="center"
+                    android:text="我要卖车"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/baibaobox"
+                    android:gravity="center"
+                    android:text="百宝箱"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+
+                    />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/xianshitehui"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/jump_layout"
+                android:layout_marginTop="15dp"
+                android:background="#ffffff"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@mipmap/xianshibackground"
+                    android:drawablePadding="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="限时特惠"
+                    android:textColor="@color/homepageredcolor"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@mipmap/arrowright"
+                    android:paddingBottom="5dp"
+                    android:layout_centerVertical="true"
+                    android:text="限时特惠" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/xianshirecycleview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/xianshitehui"
+                android:layout_marginTop="30dp"
+                android:visibility="visible">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/xianshirecycleview">
+                <TextView
+                    android:id="@+id/text_remen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热门品牌"
+                    android:layout_centerHorizontal="true"
+
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/hotpinpan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_below="@+id/text_remen"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                >
+                <TextView
+                    android:id="@+id/friendtuijian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="好友推荐"
+                    android:layout_marginLeft="80dp"
+
+                    />
+<View
+    android:layout_width="60dp"
+    android:layout_height="1dp"
+    android:background="@color/black"
+    android:layout_below="@+id/friendtuijian"
+    android:layout_marginLeft="80dp"
+    />
+                <TextView
+                    android:id="@+id/liulantext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="近期浏览"
+                    android:layout_toRightOf="@+id/friendtuijian"
+                    android:layout_marginLeft="30dp"
+
+                    />
+
+                <ListView
+                    android:id="@+id/list_view"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></ListView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/tbndfnsadf"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    ></android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </com.zhangyu.eventbusdemo.MyScrollview>
+
+
+
+</LinearLayout>

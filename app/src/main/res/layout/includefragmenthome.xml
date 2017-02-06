@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.jiuxin.jiuxinoldcar.view.MyScrollview
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mScrollview"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/bannerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- <com.jiuxin.jiuxinoldcar.view.ADView
+                 android:id="@+id/ad_ad_view"
+
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="@color/black"
+                 android:tag="(0,500)" />-->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@mipmap/ic_launcher"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fragmentcarnumber"
+                android:text="heheeheh" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/jump_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bannerLayout"
+            android:background="@color/homepageredcolor"
+
+            android:orientation="horizontal"
+            android:tag="(0,248)">
+
+            <TextView
+                android:id="@+id/jumpto_puraseFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/jumptopurse"
+                android:gravity="center"
+                android:text="我要买车"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/jumptosale"
+                android:gravity="center"
+                android:text="我要卖车"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/baibaobox"
+                android:gravity="center"
+                android:text="百宝箱"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/xianshitehui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jump_layout"
+            android:layout_marginTop="15dp"
+            android:background="#ffffff"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@mipmap/xianshibackground"
+                android:drawablePadding="5dp"
+                android:paddingBottom="5dp"
+                android:text="限时特惠"
+                android:textColor="@color/homepageredcolor"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/arrowright"
+                android:paddingBottom="5dp"
+                android:text="限时特惠" />
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/xianshirecycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xianshitehui"
+            android:background="@color/black"
+            android:visibility="visible">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/hotlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xianshirecycleview">
+
+            <TextView
+                android:id="@+id/textpinpai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:text="热门品牌" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/hotpinpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textpinpai"
+                android:background="@color/black"
+                android:visibility="visible"></android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hotlayout"
+
+            >
+
+            <TextView
+                android:id="@+id/goodcat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingRight="40dp"
+                android:text="好车推荐" />
+
+            <ListView
+                android:id="@+id/list_goodcar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goodcat"></ListView>
+
+
+            <TextView
+                android:id="@+id/liulanhistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/goodcat"
+                android:text="近期浏览" />
+
+
+            <ListView
+                android:id="@+id/list_goodhistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goodcat"
+                android:visibility="gone"
+
+                ></ListView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</com.jiuxin.jiuxinoldcar.view.MyScrollview>
+
